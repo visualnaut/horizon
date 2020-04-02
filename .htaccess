@@ -1,0 +1,49 @@
+RewriteEngine on
+
+RewriteRule ^beranda$ main.php?page=beranda [L]
+RewriteRule ^signup$ main.php?page=formSignUp [L]
+RewriteRule ^error-(.*)$ main.php?page=formSignUp&error=$1 [L]
+RewriteRule ^simpan-user$ main.php?page=simpanUser [L]
+RewriteRule ^detailberita-(.*)$ main.php?page=show_berita_full&id=$1 [L]
+RewriteRule ^kategori-(.*)$ main.php?page=kategori&id=$1 [L]
+RewriteRule ^hit-(.*)$ main.php?page=hit&id=$1 [L]
+RewriteRule ^simpan-komen$ main.php?page=simpanKomen [L]
+RewriteRule ^search$ main.php?page=search [L]
+RewriteRule ^profil$ main.php?page=profil [L]
+RewriteRule ^komentar$ admin/admin.php?page=komentar [L]
+
+RewriteRule ^login$ login.php [L]
+RewriteRule ^adminpanel$ admin/admin.php?page=beranda [L]
+RewriteRule ^userpanel$ user/user.php?page=beranda [L]
+
+RewriteRule ^berita$ user/user.php?page=berita [L]
+RewriteRule ^berita-admin$ admin/admin.php?page=beritaAdmin [L]
+
+RewriteRule ^pengguna$ admin/admin.php?page=pengguna [L]
+RewriteRule ^polling$ admin/admin.php?page=polling [L]
+RewriteRule ^detail-polling-(.*)$ admin/admin.php?page=detailPolling&id=$1 [L]
+
+RewriteRule ^proses-login$ admin/proses.php?page=proses-login [L]
+RewriteRule ^proses-logout$ admin/proses.php?page=proses-logout [L]
+
+RewriteRule ^simpan-berita$ user/proses.php?page=simpanBerita [L]
+RewriteRule ^simpan-berita-admin$ admin/proses.php?page=simpanBeritaAdmin [L]
+RewriteRule ^simpan-polling$ admin/proses.php?page=simpanPolling [L]
+
+RewriteRule ^hapus-berita-(.*)$ user/proses.php?page=hapusBerita&id=$1 [L]
+RewriteRule ^hapus-Badmin-(.*)$ admin/proses.php?page=hapusBeritaAdmin&id=$1 [L]
+
+RewriteRule ^hapus-polling-(.*)$ admin/proses.php?page=hapusPolling&id=$1 [L]
+RewriteRule ^hapus-user-(.*)$ admin/proses.php?page=hapusUser&id=$1 [L]
+RewriteRule ^hapus-komen-(.*)$ admin/proses.php?page=hapusKomen&id=$1 [L]
+
+RewriteRule ^edit-berita$ user/proses.php?page=editBerita [L]
+RewriteRule ^edit-berita-admin$ admin/proses.php?page=editBeritaAdmin [L]
+
+RewriteRule ^form-edit-berita-(.*)$ user/user.php?page=form-edit-berita&id=$1 [L]
+RewriteRule ^form-edit-admin-(.*)$ admin/admin.php?page=form-edit-berita-admin&id=$1 [L]
+RewriteRule ^toogle-(.*)$ admin/proses.php?page=toogle&id=$1 [L]
+
+
+
+Options All -Indexes
